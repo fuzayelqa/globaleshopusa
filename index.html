@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <title>Global E-Shop</title>
+    <meta name="description" content="Global E-Shop USA provides expert SEO and eCommerce solutions to help your online store rank higher, attract more traffic, and boost sales.">
+    <meta name="keywords" content="eCommerce, SEO services USA, online store optimization, Shopify SEO, WooCommerce SEO, global SEO agency, Digital marketing, Facebook marketing, global, e shop, shop, usa, mi, michigan, Business card design, global e shop, Low price marketing, cheap rate marketing, Michigan marketing, Best Digital marketing in USA, Best Digital marketing in Michigan, Card design, Busiiness, Social media service in America, Michigan Bengali, USA bengali, printing service, USA printing service, michign printing service, warren printing service, Hamtramck Printing service, Best website media, Business solution in america, best business solution in michigan, Global shop usa, global shop michigan, global printing service">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="img/Logo.png" rel="shortcut icon" type="image/x-icon" />
+    <meta content="Shop with Global e Shop USA – Michigan’s trusted online marketplace. Discover global products, exclusive deals, and fast USA shipping. Your e shop for everything you need." name="description" />
+    <link href="hidden.css" rel="stylesheet" />
+    <style>
+        :root {
+            --primary: #2a2a72;
+            --secondary: #009ffd;
+            --accent: #f9a826;
+            --light-bg: #f8faff;
+            --dark: #1a1a2e;
+        }
+        .gallery-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 15px 50px rgba(42, 42, 114, 0.1);
+            padding: 30px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(42, 42, 114, 0.1);
+        }
+        .header h1 {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        .header h1::after {
+            content: "";
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+        .header p {
+            color: #666;
+            max-width: 700px;
+            margin: 20px auto 0;
+            font-size: 1.1rem;
+        }
+        .gallery-slider {
+            position: relative;
+            overflow: hidden;
+            padding: 0 15px;
+        }
+        .image-card {
+            background: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            height: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+        }
+        .image-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(42, 42, 114, 0.2);
+            border-color: rgba(42, 42, 114, 0.2);
+        }
+        .image-wrapper {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+            cursor: pointer;
+        }
+        .image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .image-card:hover .image-wrapper img {
+            transform: scale(1.05);
+        }
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(42, 42, 114, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .image-card:hover .image-overlay {
+            opacity: 1;
+        }
+        .image-overlay i {
+            font-size: 36px;
+            color: #fff;
+            opacity: 0.8;
+        }
+        .image-info {
+            padding: 15px;
+        }
+        .image-info h5 {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        .image-info p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+        .carousel-control-next,
+        .carousel-control-prev {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #faf8ff;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 1;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .carousel-control-prev {
+            left: -20px;
+        }
+        .carousel-control-next {
+            right: -20px;
+        }
+        .carousel-control-next-icon,
+        .carousel-control-prev-icon {
+            background-size: 60%;
+            background-color: #123;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            background-position: center;
+        }
+        .carousel-indicators {
+            bottom: -35px;
+        }
+        .carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #ddd;
+            border: none;
+        }
+        .carousel-indicators .active {
+            background-color: var(--primary);
+        }
+        .slide-counter {
+            text-align: center;
+            margin-top: 40px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        .modal-content {
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        .modal-header {
+            background: var(--primary);
+            color: #fff;
+            border: none;
+        }
+        .modal-title {
+            font-weight: 600;
+        }
+        .modal-body {
+            padding: 0;
+        }
+        .modal-image {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .modal-footer {
+            background: #f8f9fa;
+            border-top: 1px solid #eee;
+        }
+        .btn-close {
+            filter: invert(1);
+        }
+        .payment-card {
+            background: #fff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+        }
+        .payment-card .icon {
+            font-size: 3rem;
+            animation: pulse 2.5s infinite;
+        }
+        .payment-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+        }
+        .payment-card:hover .icon {
+            animation: pulseHover 1.5s infinite;
+        }
+        @keyframes pulse {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+        @keyframes pulseHover {
+            0%,
+            100% {
+                color: #0d6efd;
+            }
+            50% {
+                color: #6610f2;
+            }
+        }
+        @media (max-width: 1200px) {
+            .gallery-container {
+                padding: 25px;
+            }
+            .image-wrapper {
+                height: 180px;
+            }
+        }
+        @media (max-width: 992px) {
+            .image-wrapper {
+                height: 160px;
+            }
+        }
+        @media (max-width: 768px) {
+            .gallery-container {
+                padding: 20px;
+                margin: 20px auto;
+            }
+            .header {
+                margin-bottom: 30px;
+            }
+            .header h1 {
+                font-size: 1.8rem;
+            }
+            .image-wrapper {
+                height: 220px;
+            }
+            .carousel-control-next,
+            .carousel-control-prev {
+                width: 35px;
+                height: 35px;
+            }
+            .carousel-control-prev {
+                left: -15px;
+            }
+            .carousel-control-next {
+                right: -15px;
+            }
+        }
+        @media (max-width: 576px) {
+            .gallery-container {
+                padding: 15px;
+                border-radius: 15px;
+            }
+            .header h1 {
+                font-size: 1.6rem;
+            }
+            .header p {
+                font-size: 1rem;
+            }
+            .image-wrapper {
+                height: 200px;
+            }
+            .carousel-indicators {
+                bottom: -30px;
+            }
+        }
+        @media (max-width: 400px) {
+            .image-wrapper {
+                height: 170px;
+            }
+            .image-info h5 {
+                font-size: 1rem;
+            }
+            .image-info p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+    <div class="header-top">
+        <div class="container">
+            <div class="text-center align-items-center d-flex flex-column flex-md-row justify-content-between text-md-start">
+                <div class="mb-2 contact-info mb-md-0">
+                    <i class="fas me-2 fa-phone"></i><a href="tel+12312225393">+1 231-222-5393</a> <i class="fas me-2 fa-phone ps-2"></i><a href="tel+13135546323">+1 313-554-6323</a> <i class="fas me-2 fa-envelope ms-3 ms-md-4"></i>
+                    <a href="mailto:globaleshopusa@gmail.com">globaleshopusa@gmail.com</a>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a> <a href="#"><i class="fab fa-twitter"></i></a> <a href="https://www.facebook.com/profile.php?id=61573947814784" target="_blank"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="bg-white navbar navbar-expand-lg navbar-main py-0 sticky-top">
+        <div class="container">
+            <a href="javascript:void(0)" class="navbar-brand"><img alt="" src="img/Logo.png" style="height: 96px;" /> <b class="eshop">GLOBAL E-SHOP</b> </a>
+            <button class="navbar-toggler" type="button" data-bs-target="#mainNav" data-bs-toggle="collapse"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="ms-auto navbar-nav">
+                    <li class="nav-item"><a href="javascript:void(0)" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="https://globaleshopusa.com/about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="https://globaleshopusa.com/services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="https://globaleshopusa.com/projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="https://globaleshopusa.com/team" class="nav-link">Team</a></li>
+                    <li class="nav-item"><a href="https://globaleshopusa.com/faq" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="https://globaleshopusa.com/contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="hero-section" id="home">
+        <div class="container position-relative z-index-2">
+            <div class="row align-items-center">
+                <div class="animate-up col-lg-8">
+                    <h1 class="mb-4 fw-bold display-3">Digital Excellence Meets Business Solutions</h1>
+                    <p class="mb-5 lead">Transform your business with full-cycle Digital Marketing services and professional business support</p>
+                    <div class="d-flex gap-3">
+                        <button class="btn-custom">
+                            <a href="https://globaleshopusa.com/contact" style="color: #fff; text-decoration: none;">Explore Services <i class="fas fa-arrow-right"></i></a>
+                        </button>
+                        <button class="btn-custom btn-outline" disabled>Watch Video <i class="fas fa-play"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="position-relative overflow-hidden py-7 about-section" id="about">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="position-relative z-index-2 pe-xl-4">
+                        <div class="mb-5 section-intro">
+                            <span class="gradient-text section-pre-title">Who We Are</span>
+                            <h2 class="mb-4 fw-bold display-3 animate-text">
+                                Digital Innovators<br />
+                                <span class="text-primary">Shaping Tomorrow</span>
+                            </h2>
+                        </div>
+                        <div class="mb-5 tech-path-animation"><div class="circuit-line"></div></div>
+                        <div class="about-content">
+                            <p class="mb-4 animate-paragraph fs-5 lead text-muted">
+                                At Global E-Shop, we combine creative vision with strategic digital marketing expertise to empower businesses in the online world. As a dedicated Digital Marketing Support Agency, our team specializes in
+                                crafting impactful solutions—from branding and content creation to SEO and social media strategy. We help businesses grow by connecting them with their target audiences through data-driven, results-oriented
+                                digital campaigns
+                            </p>
+                            <div class="row g-4 feature-grid">
+                                <div class="col-md-6">
+                                    <div class="feature-card hover-3d">
+                                        <div class="feature-icon bg-primary"><i class="fas fa-2x fa-brain"></i></div>
+                                        <h4>Strategic Vision</h4>
+                                        <p class="text-muted">Future-proof solutions with scalable architecture</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="feature-card hover-3d">
+                                        <div class="feature-icon bg-secondary"><i class="fas fa-2x fa-bolt"></i></div>
+                                        <h4>Rapid Execution</h4>
+                                        <p class="text-muted">Global E-Shop delivers fast digital solutions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="position-relative about-visuals">
+                        <div class="floating-tech-element"></div>
+                        <div class="main-visual hover-3d"><img alt="Digital Solutions" src="img/Logo.png" class="img-fluid rounded-4" /></div>
+                        <div class="floating-badge experience-years">
+                            <div class="inner-badge"><span class="number">4+</span> <span class="label">Years Experience</span></div>
+                        </div>
+                        <div class="floating-badge projects-completed">
+                            <div class="inner-badge"><span class="number">350+</span> <span class="label">Projects Delivered</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-section-bg">
+            <div class="floating-particles"></div>
+            <div class="animated-connection-lines"></div>
+        </div>
+    </section>
+    <section class="abouteshop-wrapper">
+        <div class="abouteshop-icon"><i class="fas fa-bullseye"></i></div>
+        <h2>About Global E-Shop</h2>
+        <p>
+            At Global E-Shop, we believe that digital marketing should simplify growth, not complicate it. Our team is dedicated to crafting strategies that bridge the gap between modern marketing trends and real business goals. Every day,
+            we turn challenges into opportunities through innovation, insight, and a steadfast commitment to our clients’ success.
+        </p>
+    </section>
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="mb-4 text-center">Social Media Marketing Packages</h2>
+            <p class="text-center mb-5">Professional Facebook marketing services with 1000 free business cards included.</p>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-primary">
+                        <div class="text-center card-header text-white bg-primary"><h3 class="mb-0">3 Months Service</h3></div>
+                        <div class="text-center card-body">
+                            <h4 class="mb-3 card-title">$700</h4>
+                            <p class="card-text">Professional Facebook marketing management for 3 months.</p>
+                            <p><strong>Includes:</strong></p>
+                            <ul class="list-unstyled">
+                                <li>✔ Facebook Page Management</li>
+                                <li>✔ Content Creation & Posting</li>
+                                <li>✔ Targeted Ads Campaigns</li>
+                                <li>✔ Analytics & Reporting</li>
+                                <li><button class="btn btn-dark mt-2">✔ 1000 Free premium Business Cards</button></li>
+                            </ul>
+                        </div>
+                        <div class="text-center card-footer"><a href="mailto:globaleshopusa@gmail.com" class="btn btn-primary">Get Started</a></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-success">
+                        <div class="text-center card-header text-white bg-success"><h3 class="mb-0">6 Months Service</h3></div>
+                        <div class="text-center card-body">
+                            <h4 class="mb-3 card-title">$1000</h4>
+                            <p class="card-text">Enhanced Facebook marketing for 6 months to boost your brand.</p>
+                            <p><strong>Includes:</strong></p>
+                            <ul class="list-unstyled">
+                                <li>✔ Facebook Page Management</li>
+                                <li>✔ Content Creation & Posting</li>
+                                <li>✔ Targeted Ads Campaigns</li>
+                                <li>✔ Monthly Analytics & Reporting</li>
+                                <li><button class="btn btn-dark mt-2">✔ 2000 Free premium Business Cards</button></li>
+                            </ul>
+                        </div>
+                        <div class="text-center card-footer"><a href="mailto:globaleshopusa@gmail.com" class="btn btn-success">Get Started</a></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-warning">
+                        <div class="text-center card-header text-white bg-warning"><h3 class="mb-0">1 Year Service</h3></div>
+                        <div class="text-center card-body">
+                            <h4 class="mb-3 card-title">$1500</h4>
+                            <p class="card-text">Full professional Facebook marketing for 1 year with premium support.</p>
+                            <p><strong>Includes:</strong></p>
+                            <ul class="list-unstyled">
+                                <li>✔ Facebook Page Management</li>
+                                <li>✔ Content Creation & Posting</li>
+                                <li>✔ Targeted Ads Campaigns</li>
+                                <li>✔ Weekly Analytics & Reporting</li>
+                                <li>✔ Priority Support</li>
+                                <li><button class="btn btn-dark mt-2">✔ 3000 Free premium Business Cards</button></li>
+                            </ul>
+                        </div>
+                        <div class="text-center card-footer"><a href="mailto:globaleshopusa@gmail.com" class="btn btn-warning text-dark">Get Started</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5 bg-light" id="services">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title animate-up">Our Expertise</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 animate-up" style="animation-delay: 0.4s;">
+                    <div class="p-4 card h-100 service-card">
+                        <i class="fas fa-3x mb-4 text-primary fa-earth"></i>
+                        <h3 class="mb-3">Digital Marketing</h3>
+                        <p class="text-muted">At Global E Shop, we offer a comprehensive range of digital marketing services designed to grow your Business.</p>
+                        <button class="btn-custom align-self-start mt-auto btn-sm">Learn More <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 animate-up" style="animation-delay: 0.6s;">
+                    <div class="p-4 card h-100 service-card">
+                        <i class="fas fa-3x mb-4 text-primary fa-search"></i>
+                        <h3 class="mb-3">Search Engine Optimization (SEO)</h3>
+                        <p class="text-muted">Boost your website’s visibility on Google and other search engines with strategic keyword optimization and technical SEO.</p>
+                        <button class="btn-custom align-self-start mt-auto btn-sm">Learn More <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 animate-up" style="animation-delay: 1.2s;">
+                    <div class="p-4 card h-100 service-card">
+                        <i class="mb-4 fa-3x text-primary fab fa-jira"></i>
+                        <h3 class="mb-3">Flyer Design / Banner Design</h3>
+                        <p class="text-muted">Promote events, products, or services with high-quality, print-ready flyers designed for maximum visibility and clarity.</p>
+                        <button class="btn-custom align-self-start mt-auto btn-sm">Learn More <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 animate-up" style="animation-delay: 1.4s;">
+                    <div class="p-4 card h-100 service-card">
+                        <i class="fas fa-3x mb-4 text-primary fa-image"></i>
+                        <h3 class="mb-3">Social Media Banners</h3>
+                        <p class="text-muted">Engaging banner designs for platforms like Facebook, Instagram, LinkedIn, and YouTube that enhance your online presence.</p>
+                        <button class="btn-custom align-self-start mt-auto btn-sm">Learn More <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 animate-up" style="animation-delay: 0.2s;">
+                    <div class="p-4 card h-100 service-card">
+                        <i class="fas fa-3x mb-4 text-primary fa-globe"></i>
+                        <h3 class="mb-3">Custom Business Card Designs</h3>
+                        <p class="text-muted">Unique layouts tailored to your brand identity, including color scheme, fonts, and logo.</p>
+                        <button class="btn-custom align-self-start mt-auto btn-sm">Learn More <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 animate-up" style="animation-delay: 0.4s;">
+                    <div class="p-4 card h-100 service-card">
+                        <i class="mb-4 fa-3x text-primary fab fa-wordpress"></i>
+                        <h3 class="mb-3">Web Design & Development</h3>
+                        <p class="text-muted">Custom themes, plugins, and WooCommerce development</p>
+                        <button class="btn-custom align-self-start mt-auto btn-sm">Learn More <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 animate-up" style="animation-delay: 0.6s;">
+                    <div class="p-4 card h-100 service-card">
+                        <i class="fas fa-3x mb-4 text-primary fa-bug"></i>
+                        <h3 class="mb-3">Quality Assurance</h3>
+                        <p class="text-muted">Manual & automated testing with Selenium, Pytest, JMeter</p>
+                        <button class="btn-custom align-self-start mt-auto btn-sm">Learn More <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 animate-up" style="animation-delay: 0.5s;">
+                    <div class="p-4 card h-100 service-card">
+                        <i class="fas fa-3x mb-4 text-primary fa-envelope-open-text"></i>
+                        <h3 class="mb-3">Email Marketing</h3>
+                        <p class="text-muted">Engaging campaigns, automation, and performance analytics</p>
+                        <button class="btn-custom align-self-start mt-auto btn-sm">Learn More <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 animate-up" style="animation-delay: 0.6s;">
+                    <div class="p-4 card h-100 service-card">
+                        <i class="mb-4 fa-3x text-primary fab fa-facebook-f"></i>
+                        <h3 class="mb-3">Social Media Marketing</h3>
+                        <p class="text-muted">Strategy, content creation, and paid ad campaigns</p>
+                        <button class="btn-custom align-self-start mt-auto btn-sm">Learn More <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-5" id="business">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title">Business Services</h2>
+            <div class="row g-4">
+                <div class="col-md-6 animate-up">
+                    <div class="p-4 card h-100 service-card text-white bg-primary">
+                        <i class="fas fa-3x mb-4 fa-passport"></i>
+                        <h3 class="mb-3">Student Visa Processing</h3>
+                        <p>Professional visa application assistance.</p>
+                        <button class="btn-custom align-self-start mt-auto btn-light">Get Started <i class="fas fa-arrow-up-right-from-square"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-6 animate-up">
+                    <div class="p-4 card h-100 service-card text-white bg-secondary">
+                        <i class="fas fa-3x mb-4 fa-calculator"></i>
+                        <h3 class="mb-3">Tax Services</h3>
+                        <p>Professional income tax return filing and consultation</p>
+                        <button class="btn-custom align-self-start mt-auto btn-light">Calculate Now <i class="fas fa-calculator"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="why-choose">
+        <h2>Why Choose Global E-Shop</h2>
+        <div class="choose-grid">
+            <div class="choose-box">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Creative Strategy</h3>
+                <p>We deliver custom digital marketing strategies that blend innovation and insight for your brand.</p>
+            </div>
+            <div class="choose-box">
+                <i class="fas fa-chart-line"></i>
+                <h3>Data-Driven Growth</h3>
+                <p>Our solutions are backed by real-time analytics to ensure measurable, impactful business results.</p>
+            </div>
+            <div class="choose-box">
+                <i class="fas fa-users"></i>
+                <h3>Client-First Focus</h3>
+                <p>We build strong partnerships by staying aligned with your goals from start to finish.</p>
+            </div>
+        </div>
+    </section>
+    <div class="gallery-container">
+        <div class="header">
+            <h1>Our Services</h1>
+            <p>Browse through our collection of images. Click any image to view it in full size.</p>
+        </div>
+        <div class="gallery-slider">
+            <div class="slide carousel" id="galleryCarousel" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="active carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="image-card">
+                                    <div class="image-wrapper" data-bs-target="#imageModal1" data-bs-toggle="modal">
+                                        <img alt="Mountain Landscape" src="img/Businesscard.jpeg" />
+                                        <div class="image-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </div>
+                                    <div class="image-info">
+                                        <h5>Business Card Design</h5>
+                                        <p>Card Design & Printing</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="image-card">
+                                    <div class="image-wrapper" data-bs-target="#imageModal2" data-bs-toggle="modal">
+                                        <img alt="Ocean View" src="img/banner.jpeg" />
+                                        <div class="image-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </div>
+                                    <div class="image-info">
+                                        <h5>Banner Design</h5>
+                                        <p>Banner Design & Printing</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="image-card">
+                                    <div class="image-wrapper" data-bs-target="#imageModal3" data-bs-toggle="modal">
+                                        <img alt="Forest Path" src="img/yard.jpeg" />
+                                        <div class="image-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </div>
+                                    <div class="image-info">
+                                        <h5>Bill Board</h5>
+                                        <p>Bill Board Design & Printing</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="image-card">
+                                    <div class="image-wrapper" data-bs-target="#imageModal4" data-bs-toggle="modal">
+                                        <img alt="Misty Mountains" src="img/littleyard.jpeg" />
+                                        <div class="image-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </div>
+                                    <div class="image-info">
+                                        <h5>Yard Sign</h5>
+                                        <p>Yard Sign & Printing</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <div class="col-md-3 col-sm-6">
+                                <div class="image-card">
+                                    <div class="image-wrapper" data-bs-target="#imageModal5" data-bs-toggle="modal">
+                                        <img alt="Northern Lights" src="img/t-shirt1.jpeg" />
+                                        <div class="image-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </div>
+                                    <div class="image-info">
+                                        <h5>T-Shirt Design</h5>
+                                        <p>T- Shirt Design & Printing</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="image-card">
+                                    <div class="image-wrapper" data-bs-target="#imageModal6" data-bs-toggle="modal">
+                                        <img alt="Tropical Beach" src="img/Bottle.jpeg" />
+                                        <div class="image-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </div>
+                                    <div class="image-info">
+                                        <h5>Bottle Design</h5>
+                                        <p>Bottle Design</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="image-card">
+                                    <div class="image-wrapper" data-bs-target="#imageModal7" data-bs-toggle="modal">
+                                        <img alt="Snowy Mountains" src="img/Brochure.jpeg" />
+                                        <div class="image-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </div>
+                                    <div class="image-info">
+                                        <h5>Brochure Design</h5>
+                                        <p>Brochure Design & Printing</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 col-sm-6">
+                                <div class="image-card">
+                                    <div class="image-wrapper" data-bs-target="#imageModal8" data-bs-toggle="modal">
+                                        <img alt="Waterfall" src="img/web2.png" />
+                                        <div class="image-overlay"><i class="fas fa-search-plus"></i></div>
+                                    </div>
+                                    <div class="image-info">
+                                        <h5>Web Design & Develop</h5>
+                                        <p>FrontEnd Web Design & Development</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="visually-hidden">Next</span>
+                </button>
+                <div class="carousel-indicators">
+                    <button class="active" type="button" aria-label="Slide 1" aria-current="true" data-bs-slide-to="0" data-bs-target="#galleryCarousel"></button>
+                    <button type="button" aria-label="Slide 2" data-bs-slide-to="1" data-bs-target="#galleryCarousel"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="fade modal" id="imageModal1" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Business Card Design</h5>
+                    <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body"><img alt="Mountain Landscape" src="img/Businesscard.jpeg" width="800" /></div>
+                <div class="modal-footer"><p class="m-0">Business Card Design</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="fade modal" id="imageModal2" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Banner Design</h5>
+                    <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body"><img alt="Banner" src="img/banner.jpeg" width="800" /></div>
+                <div class="modal-footer"><p class="m-0">Rollup Banner</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="fade modal" id="imageModal3" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Bill Board Design</h5>
+                    <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body"><img alt="Forest Path" src="img/yard.jpeg" width="800" /></div>
+                <div class="modal-footer"><p class="m-0">Bill Board Design</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="fade modal" id="imageModal4" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Yard Sign Design</h5>
+                    <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body"><img alt="Misty Mountains" src="img/littleyard.jpeg" width="800" /></div>
+                <div class="modal-footer"><p class="m-0">Yard Sign Design</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="fade modal" id="imageModal5" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">T Shirt Design</h5>
+                    <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body"><img alt="Northern Lights" src="img/t-shirt1.jpeg" width="800" /></div>
+                <div class="modal-footer"><p class="m-0">T Shirt Design & Printing</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="fade modal" id="imageModal6" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Bottle Design</h5>
+                    <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body"><img alt="Bottle" src="img/Bottle.jpeg" width="800" /></div>
+                <div class="modal-footer"><p class="m-0">Bottle Design</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="fade modal" id="imageModal7" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Brochure Design</h5>
+                    <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body"><img alt="Snowy Mountains" src="img/Brochure.jpeg" width="800" /></div>
+                <div class="modal-footer"><p class="m-0">Brochure Design & Printing</p></div>
+            </div>
+        </div>
+    </div>
+    <div class="fade modal" id="imageModal8" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Web Development</h5>
+                    <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body"><img alt="Waterfall" src="img/web2.png" width="800" /></div>
+                <div class="modal-footer"><p class="m-0">Web Design & Development</p></div>
+            </div>
+        </div>
+    </div>
+    <section class="position-relative overflow-hidden py-7 py-5 team-section" id="team">
+        <div class="container">
+            <div class="text-center mb-7 section-intro">
+                <span class="gradient-text section-pre-title">Our Experts</span>
+                <h2 class="mb-4 fw-bold display-3">Meet Our <span class="text-primary">Leadership</span></h2>
+                <p class="lead mx-auto" style="max-width: 700px;">A team of passionate innovators dedicated to delivering exceptional results</p>
+            </div>
+            <div class="row justify-content-center mb-7">
+                <div class="col-lg-10">
+                    <div class="position-relative overflow-hidden bg-white ceo-card p-5 rounded-4 shadow-lg">
+                        <div class="row g-4 align-items-center">
+                            <div class="text-center col-md-4">
+                                <div class="mb-4 ceo-avatar-wrapper mb-md-0">
+                                    <img alt="CEO" src="img/Mahfuz.jpeg" class="rounded-circle ceo-avatar img-fluid shadow" />
+                                    <div class="avatar-decoration"></div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="ceo-message">
+                                    <div class="mb-3 quote-icon text-primary">
+                                        <svg fill="none" height="40" viewBox="0 0 24 24" width="40" xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M14 16H17C18.6569 16 20 14.6569 20 13V10C20 8.34315 18.6569 7 17 7H14V16ZM14 16V20M14 16H10M10 16H7C5.34315 16 4 14.6569 4 13V10C4 8.34315 5.34315 7 7 7H10M10 16V20M10 7V3M14 7V3"
+                                                stroke="currentColor"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                                stroke-width="2"
+                                            />
+                                        </svg>
+                                    </div>
+                                    <h3 class="mb-3">Message From Our CEO</h3>
+                                    <blockquote class="mb-4">
+                                        <p class="lead">
+                                            "At Global E-Shop, we believe that digital marketing should simplify growth, not complicate it. Our team is dedicated to crafting strategies that bridge the gap between modern marketing trends and
+                                            real business goals. Every day, we turn challenges into opportunities through innovation, insight, and a steadfast commitment to our clients’ success."
+                                        </p>
+                                    </blockquote>
+                                    <div class="ceo-signature">
+                                        <p class="mb-1 fw-bold">MAHFUZ RAHMAN</p>
+                                        <p class="text-muted small">Founder & CEO</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ceo-card-decoration"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 justify-content-center pt-5">
+                <div class="col-md-6 col-lg-4">
+                    <div class="team-member-card">
+                        <div class="member-image-wrapper">
+                            <img alt="Team Member" src="img/saidur.jpeg" class="member-image" />
+                            <div class="member-social-links">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a> <a href="#" class="social-link"><i class="fab fa-twitter"></i></a> <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4 class="mb-1">Saidur Rahman</h4>
+                            <p class="mb-2 text-primary">Managing Director</p>
+                            <p class="text-muted small">10+ years experience in Marketing and Cybarecurity.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="team-member-card">
+                        <div class="member-image-wrapper">
+                            <img alt="Team Member" src="img/fuzayel.jpg" class="member-image" />
+                            <div class="member-social-links">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a> <a href="#" class="social-link"><i class="fab fa-twitter"></i></a> <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4 class="mb-1">Ozih Uddin Al Fuzayel</h4>
+                            <p class="mb-2 text-primary">QA Automation & Web Developer</p>
+                            <p class="text-muted small">Expert in Selenium, JMeter, Postman, Azure Devops and Agile Management.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="team-member-card">
+                        <div class="member-image-wrapper">
+                            <img alt="Team Member" src="img/tofayel.jpeg" class="member-image" />
+                            <div class="member-social-links">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a> <a href="#" class="social-link"><i class="fab fa-twitter"></i></a> <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <div class="member-info">
+                            <h4 class="mb-1">Tofayel Ahmed</h4>
+                            <p class="mb-2 text-primary">Business Solutions Manager (Marketing)</p>
+                            <p class="text-muted small">Specializing in digital transformation and client success</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-7 team-stats">
+                <div class="row g-4">
+                    <div class="col-md-3 col-6">
+                        <div class="stat-card">
+                            <div class="stat-number" data-count="350">0</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-card">
+                            <div class="stat-number" data-count="50">0</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-card">
+                            <div class="stat-number" data-count="15">0</div>
+                            <div class="stat-label">Team Members</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-card">
+                            <div class="stat-number" data-count="4">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="team-section-bg">
+            <div class="floating-dots"></div>
+            <div class="connection-lines"></div>
+        </div>
+    </section>
+    <section class="testimonial-section">
+        <h2>Client Reviews</h2>
+        <div class="slider" id="slider">
+            <div class="slides" id="slides">
+                <div class="slide">
+                    <p>"Global E-Shop exceeded our expectations. Their digital marketing plan drove great results in only a few weeks."</p>
+                    <h4>— Laura Bennett, EcoFresh Co.</h4>
+                </div>
+                <div class="slide">
+                    <p>"The team is smart, responsive, and professional. We’ve seen real improvements in SEO and customer engagement."</p>
+                    <h4>— Michael Torres, UrbanCraft</h4>
+                </div>
+                <div class="slide">
+                    <p>"Their design and branding work is beautiful. Their marketing insights helped us reach our ideal clients faster."</p>
+                    <h4>— Rebecca Lin, StyleNest Digital</h4>
+                </div>
+            </div>
+        </div>
+        <div class="nav-buttons"><button onclick="prevSlide()">⟨</button> <button onclick="nextSlide()">⟩</button></div>
+    </section>
+    <section class="py-5 bg-primary">
+        <div class="text-center container">
+            <h4 class="mb-4 fw-bold" style="color: #faf8ff;">We Accept</h4>
+            <div class="d-flex flex-wrap gap-5 justify-content-center">
+                <div class="p-4 payment-card rounded shadow-sm" style="min-width: 160px; cursor: pointer;">
+                    <div class="mb-3 icon">🏦</div>
+                    <div class="fw-semibold text">Bank Transfer</div>
+                </div>
+                <div class="p-4 payment-card rounded shadow-sm" style="min-width: 160px; cursor: pointer;">
+                    <div class="mb-3 icon"><i class="fas fa-money-check-alt"></i></div>
+                    <div class="fw-semibold text">Zelle</div>
+                </div>
+                <div class="p-4 payment-card rounded shadow-sm" style="min-width: 160px; cursor: pointer;">
+                    <div class="mb-3 icon">💵</div>
+                    <div class="fw-semibold text">Cash</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="position-relative overflow-hidden py-7 py-5 contact-section" id="contact">
+        <div class="container">
+            <div class="text-center mb-7 section-intro">
+                <span class="gradient-text section-pre-title">Get In Touch</span>
+                <h2 class="mb-4 fw-bold display-3">Let's <span class="text-primary">Connect</span></h2>
+                <p class="lead mx-auto" style="max-width: 700px;">Have a project in mind or want to discuss how we can help your business? Reach out to us.</p>
+            </div>
+            <div class="row justify-content-center g-5">
+                <div class="col-lg-6">
+                    <div class="bg-white p-5 rounded-4 shadow-lg contact-form-card hover-3d">
+                        <h3 class="mb-4">Send Us a Message</h3>
+                        <form action="#" class="needs-validation" id="contactForm" method="post" novalidate>
+                            <div class="mb-4 form-floating">
+                                <input class="form-control" id="name" placeholder="Your Name" required /> <label for="name">Your Name</label>
+                                <div class="invalid-feedback">Please provide your name.</div>
+                            </div>
+                            <div class="mb-4 form-floating">
+                                <input class="form-control" id="email" placeholder="Your Email" required type="email" /> <label for="email">Your Email</label>
+                                <div class="invalid-feedback">Please provide a valid email.</div>
+                            </div>
+                            <div class="mb-4 form-floating"><input class="form-control" id="subject" placeholder="Subject" /> <label for="subject">Subject</label></div>
+                            <div class="mb-4 form-floating">
+                                <textarea class="form-control" id="message" placeholder="Your Message" required style="height: 150px;"></textarea> <label for="message">Your Message</label>
+                                <div class="invalid-feedback">Please enter your message.</div>
+                            </div>
+                            <button class="btn-custom w-100" type="submit">
+                                <span class="submit-text disabled">Send Message</span> <span class="d-none loading-icon"><span class="spinner-border spinner-border-sm" aria-hidden="true" role="status"></span> Sending...</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-info-wrapper">
+                        <div class="mb-4 contact-info-card hover-3d p-4 rounded-4 text-white bg-primary">
+                            <div class="d-flex">
+                                <div class="contact-icon flex-shrink-0"><i class="fas fa-2x fa-map-marker-alt"></i></div>
+                                <div class="contact-details ms-4">
+                                    <h4 class="mb-2">Our Locations</h4>
+                                    <p class="mb-1"><i class="fa fa-map pe-2"></i> 28363 Hoover RD, Warren, MI 48093</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4 contact-info-card hover-3d p-4 rounded-4 text-white bg-secondary">
+                            <div class="d-flex">
+                                <div class="contact-icon flex-shrink-0"><i class="fas fa-2x fa-envelope"></i></div>
+                                <div class="contact-details ms-4">
+                                    <h4 class="mb-2">Email Us</h4>
+                                    <p class="mb-1"><a href="mailto:info@globaleshopusa.com" class="text-white">info@globaleshopusa.com</a></p>
+                                    <p><a href="mailto:globaleshopusa@gmail.com" class="text-white">globaleshopusa@gmail.com</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-4 text-white contact-info-card hover-3d rounded-4 bg-dark">
+                            <div class="d-flex">
+                                <div class="contact-icon flex-shrink-0"><i class="fas fa-2x fa-phone-alt"></i></div>
+                                <div class="contact-details ms-4">
+                                    <h4 class="mb-2">Call Us</h4>
+                                    <p class="mb-1"><a href="tel:+12312225393" class="text-white">+1 231-222-5393</a></p>
+                                    <p class="mb-1"><a href="tel:+13135546323" class="text-white">+1 313-554-6323</a></p>
+                                    <p>Mon-Fri: 9AM - 6PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-5 social-media-links">
+                            <h5 class="mb-3">Follow Us</h5>
+                            <div class="d-flex gap-3">
+                                <a href="https://www.facebook.com/profile.php?id=61573947814784" target="_blank" class="social-link rounded-circle"><i class="fab fa-facebook-f"></i> </a><a href="#" class="social-link rounded-circle"><i class="fab fa-twitter"></i> </a>
+                                <a href="#" class="social-link rounded-circle"><i class="fab fa-linkedin-in"></i> </a><a href="#" class="social-link rounded-circle"><i class="fab fa-instagram"></i> </a>
+                                <a href="#" class="social-link rounded-circle"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact-bg-elements">
+            <div class="floating-circle circle-1"></div>
+            <div class="floating-circle circle-2"></div>
+            <div class="floating-circle circle-3"></div>
+            <div class="contact-dots-overlay"></div>
+        </div>
+    </section>
+    <footer class="text-white bg-dark footer-section pt-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-4">
+                    <div class="animate-slide footer-about">
+                        <img alt="Global E Shop" src="img/Logo.png" width="200" class="mb-4 footer-logo" />
+                        <p class="mb-4">Transforming businesses through innovative technology solutions and professional services.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a> <a href="#" class="social-link"><i class="fab fa-twitter"></i></a> <a href="https://www.facebook.com/profile.php?id=61573947814784" target="_blank" class="social-link"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                    <div class="animate-slide footer-links" style="--delay: 0.2s;">
+                        <h5 class="mb-4">Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <a href="https://globaleshopusa.com/"><i class="fas me-2 fa-chevron-right"></i>Home</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="https://globaleshopusa.com/about"><i class="fas me-2 fa-chevron-right"></i>About</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="https://globaleshopusa.com/projects"><i class="fas me-2 fa-chevron-right"></i>Projects</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="https://globaleshopusa.com/team"><i class="fas me-2 fa-chevron-right"></i>Team</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="https://globaleshopusa.com/contact"><i class="fas me-2 fa-chevron-right"></i>Contact</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="https://globaleshopusa.com/faq"><i class="fas me-2 fa-chevron-right"></i>FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="animate-slide footer-services" style="--delay: 0.4s;">
+                        <h5 class="mb-4">Our Services</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <a href="#"><i class="fas me-2 fa-earth"></i>Digital Marketing Strategy</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#"><i class="fab fa-wordpress me-2"></i>SEO Optimization</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#"><i class="fab fa-facebook-f me-2"></i>Social Media Management</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#"><i class="fas me-2 fa-cogs"></i>Branding & Design (logos, flyers, business cards)</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#"><i class="fas me-2 fa-envelope"></i>Email Marketing Campaigns</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#"><i class="fas me-2 fa-passport"></i>Student Visa Services</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="animate-slide footer-contact" style="--delay: 0.6s;">
+                        <h5 class="mb-4">Contact Us</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><i class="fas me-2 fa-map-marker-alt"></i> 28363 Hoover RD, Warren, MI 48093.</li>
+                            <li class="mb-3"><i class="fas me-2 fa-phone"></i> <a href="tel:+12312225393" style="color: #fff; text-decoration: none;">+1 231-222-5393</a></li>
+                            <li class="mb-3"><i class="fas me-2 fa-phone"></i> <a href="tel:+13135546323" style="color: #fff; text-decoration: none;">+1 313-554-6323</a></li>
+                            <li class="mb-3"><i class="fas me-2 fa-envelope"></i> info@globaleshopusa.com</li>
+                            <li class="mb-3"><i class="fas me-2 fa-envelope"></i> globaleshopusa@gmail.com</li>
+                            <li class="mb-3"><i class="fas me-2 fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-5 border-secondary border-top footer-bottom py-4">
+                <div class="text-center container">
+                    <p class="mb-0">© 2025 Global E-Shop. All rights reserved. Developed By <a href="https://alfuzayel.netlify.app" style="color: #ff0; text-decoration: none;" target="_blank">OZIH UDDIN AL FUZAYEL</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="fixed-buttons">
+        <a href="https://wa.me/+15864552275" class="whatsapp-btn" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i> </a><button class="scroll-top-btn"><i class="fas fa-arrow-up"></i></button>
+    </div>
+    <script src="index.js"></script>
+    <script src="project.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</html>

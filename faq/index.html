@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <title>Global E-Shop (FAQ)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="img/Logo.png" rel="shortcut icon" type="image/x-icon" />
+    <link href="hidden.css" rel="stylesheet" />
+    <style>
+        h1 {
+            color: #020202;
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 700;
+            font-size: 36px;
+            font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+        }
+        .faq-item {
+            background: #fffef6;
+            border: 1px solid #f4e9c4;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            box-shadow: 0 6px 12px rgba(218, 165, 32, 0.1);
+        }
+        .faq-question {
+            cursor: pointer;
+            padding: 20px 25px;
+            font-size: 18px;
+            font-weight: 600;
+            position: relative;
+            user-select: none;
+            color: #7c5c00;
+        }
+        .faq-question::after {
+            content: "+";
+            position: absolute;
+            right: 25px;
+            font-size: 24px;
+            font-weight: 700;
+            color: #daa520;
+            transition: transform 0.3s ease;
+        }
+        .faq-question.active::after {
+            content: "−";
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 25px;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #5a4b1e;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+        .faq-answer.open {
+            max-height: 500px;
+            padding: 15px 25px 25px 25px;
+        }
+    </style>
+    </head>
+    <body>
+    <div class="header-top">
+        <div class="container">
+            <div class="text-center align-items-center d-flex flex-column flex-md-row justify-content-between text-md-start">
+                <div class="contact-info mb-2 mb-md-0">
+                    <i class="fas me-2 fa-phone"></i><a href="tel+1 2312225393">+1 231-222-5393</a> <i class="fas me-2 fa-phone ps-2"></i><a href="tel+1 3135546323">+1 313-554-6323</a> <i class="fas me-2 fa-envelope ms-3 ms-md-4"></i>
+                    <a href="mailto:globaleshopusa@gmail.com">globaleshopusa@gmail.com</a>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-linkedin"></i></a> <a href="#"><i class="fab fa-twitter"></i></a> <a href="https://www.facebook.com/profile.php?id=61573947814784"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav class="bg-white navbar navbar-expand-lg navbar-main py-0 sticky-top">
+        <div class="container">
+            <a href="https://globaleshopusa.com/" class="navbar-brand"><img alt="" src="img/Logo.png" style="height: 96px;" /> <b class="eshop">GLOBAL E-SHOP</b> </a>
+            <button class="navbar-toggler" data-bs-target="#mainNav" data-bs-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="ms-auto navbar-nav">
+                    <li class="nav-item"><a href="https://globaleshopusa.com/" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="https://globaleshopusa.com/about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="https://globaleshopusa.com/services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="https://globaleshopusa.com/projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="https://globaleshopusa.com/team" class="nav-link">Team</a></li>
+                    <li class="nav-item"><a href="https://globaleshopusa.com/faq" class="nav-link active">FAQ</a></li>
+                    <li class="nav-item"><a href="https://globaleshopusa.com/contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container pb-5">
+        <h1 class="pt-5">Frequently Asked Questions (FAQ's)</h1>
+        <div class="faq-item">
+            <div class="faq-question">What services does Global E-Shop offer?</div>
+            <div class="faq-answer">Global E-Shop specializes in digital marketing services including branding, content creation, SEO, social media strategy, and more tailored to help your business grow online.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How can I get started with Global E-Shop?</div>
+            <div class="faq-answer">Simply contact us through our website or email to schedule a consultation. We’ll assess your needs and tailor a plan that fits your business goals.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">What makes your digital marketing strategies unique?</div>
+            <div class="faq-answer">We combine creative vision with data-driven insights to craft strategies that not only look great but deliver measurable results aligned with your target audience.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Do you provide ongoing support after launching campaigns?</div>
+            <div class="faq-answer">Yes! We believe in building long-term partnerships and offer ongoing monitoring, analysis, and optimization to ensure your campaigns stay effective.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Can Global E-Shop help with small business budgets?</div>
+            <div class="faq-answer">Absolutely. We design scalable marketing solutions tailored to fit a variety of budget sizes without compromising on quality or results.</div>
+        </div>
+    </div>
+    <footer class="pt-5 bg-dark footer-section text-white">
+        <div class="container">
+            <div class="g-5 row">
+                <div class="col-md-6 col-lg-4">
+                    <div class="animate-slide footer-about">
+                        <img alt="Global E Shop" src="img/Logo.png" class="mb-4 footer-logo" width="200" />
+                        <p class="mb-4">Transforming businesses through innovative technology solutions and professional services.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a> <a href="#" class="social-link"><i class="fab fa-twitter"></i></a> <a href="https://www.facebook.com/profile.php?id=61573947814784" class="social-link"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-2">
+                    <div class="animate-slide footer-links" style="--delay: 0.2s;">
+                        <h5 class="mb-4">Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <a href="https://globaleshopusa.com/"><i class="fas me-2 fa-chevron-right"></i>Home</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="https://globaleshopusa.com/about"><i class="fas me-2 fa-chevron-right"></i>About</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="https://globaleshopusa.com/projects"><i class="fas me-2 fa-chevron-right"></i>Projects</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="https://globaleshopusa.com/team"><i class="fas me-2 fa-chevron-right"></i>Team</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="https://globaleshopusa.com/faq"><i class="fas me-2 fa-chevron-right"></i>FAQ</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="https://globaleshopusa.com/contact"><i class="fas me-2 fa-chevron-right"></i>Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="animate-slide footer-services" style="--delay: 0.4s;">
+                        <h5 class="mb-4">Our Services</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">
+                                <a href="#"><i class="fas me-2 fa-earth"></i>Digital Marketing Strategy</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#"><i class="me-2 fa-wordpress fab"></i>SEO Optimization</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#"><i class="fas me-2 fa-bug"></i>Social Media Management</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#"><i class="fas me-2 fa-cogs"></i>Branding & Design (logos, flyers, business cards)</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#"><i class="fas me-2 fa-vial"></i>Email Marketing Campaigns</a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#"><i class="fas me-2 fa-passport"></i>Student Visa Services</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="animate-slide footer-contact" style="--delay: 0.6s;">
+                        <h5 class="mb-4">Contact Us</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-3"><i class="fas me-2 fa-map-marker-alt"></i> 28363 Hoover RD, Warren, MI 48093</li>
+                            <li class="mb-3"><i class="fas me-2 fa-phone"></i> <a href="tel:+1 2312225393" style="color: #fff; text-decoration: none;">+1 231-222-5393</a></li>
+                            <li class="mb-3"><i class="fas me-2 fa-phone"></i> <a href="tel:+1 3135546323" style="color: #fff; text-decoration: none;">+1 313-554-6323</a></li>
+                            <li class="mb-3"><i class="fas me-2 fa-envelope"></i> globaleshopusa@gmail.com</li>
+                            <li class="mb-3"><i class="fas me-2 fa-envelope"></i> globaleshopusa@gmail.com</li>
+                            <li class="mb-3"><i class="fas me-2 fa-clock"></i> Mon-Fri: 9AM - 6PM</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="border-secondary border-top footer-bottom mt-5 py-4">
+                <div class="container text-center">
+                    <p class="mb-0">© 2025 Global E-Shop. All rights reserved. Developed By <a href="https://alfuzayel.netlify.app" style="color: #ff0; text-decoration: none;" target="_blank">OZIH UDDIN AL FUZAYEL</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="fixed-buttons">
+        <a href="https://wa.me/+2312225393" class="whatsapp-btn" rel="noopener" target="_blank"><i class="fab fa-whatsapp"></i> </a><button class="scroll-top-btn"><i class="fas fa-arrow-up"></i></button>
+    </div>
+    <script src="index.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach((question) => {
+            question.addEventListener("click", () => {
+                const currentlyActive = document.querySelector(".faq-question.active");
+                if (currentlyActive && currentlyActive !== question) {
+                    currentlyActive.classList.remove("active");
+                    currentlyActive.nextElementSibling.classList.remove("open");
+                }
+
+                question.classList.toggle("active");
+                question.nextElementSibling.classList.toggle("open");
+            });
+        });
+    </script>
+   </body>
+</html>
